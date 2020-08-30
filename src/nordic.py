@@ -31,6 +31,32 @@ from dataclasses import dataclass
 
 @dataclass
 class Hypocenter:
+    """
+    A data class used to represent the information in the hypocenter line (format 1)
+    of a SEISAN S-file in Nordic format
+
+    Attributes
+    ----------
+    year : int
+        year of event origin time
+    month : int
+        month of event origin time
+    day : int
+        yday of event origin time
+    hour : int
+        hour of event origin time
+    minute : int
+        year of event origin time
+    second : float
+        year of event origin time
+    latitude : float
+        latitude of the event epicenter in degrees (positive in the northern hemisphere)
+    longitude : float
+        latitude of the event epicenter in degrees (positive in the eastern hemisphere)
+    depth : float
+        focal depth of the event hypocenter in km (positive if below sea level)
+
+    """
     year:               int = None
     month:              int = None
     day:                int = None
@@ -61,6 +87,10 @@ class Hypocenter:
 
 @dataclass
 class Phase_pick:
+    """
+    A data class used to represent the information in the phase reading line (format 4)
+    of a SEISAN S-file in Nordic format
+    """
     station_name:       str = '     '
     instrument_type:    str = ' '
     component:          str = ' '
