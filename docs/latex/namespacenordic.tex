@@ -13,7 +13,7 @@ class \mbox{\hyperlink{classnordic_1_1_phase__pick}{Phase\+\_\+pick}}
 def \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{read\+\_\+line1}} (line)
 \begin{DoxyCompactList}\small\item\em Function read\+\_\+line1. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespacenordic_a30db7f3b3a04f63be7a8549e6bdcde96}{read\+\_\+lineH}} (line)
-\item 
+\begin{DoxyCompactList}\small\item\em Function read\+\_\+lineH. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{read\+\_\+line4}} (line)
 \begin{DoxyCompactList}\small\item\em Function read\+\_\+line4. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -69,3 +69,19 @@ Reads as argument a string formatted as a Line 4 in S\+E\+I\+S\+AN\textquotesing
 \doxysubsubsection{\texorpdfstring{read\_lineH()}{read\_lineH()}}
 {\footnotesize\ttfamily def nordic.\+read\+\_\+lineH (\begin{DoxyParamCaption}\item[{}]{line }\end{DoxyParamCaption})}
 
+
+
+Function read\+\_\+lineH. 
+
+Reads as argument a string formatted as a Line H in S\+E\+I\+S\+AN\textquotesingle{}s Nordic format, corresponding to a high-\/precision hypocenter
+
+Returns a list with \mbox{[}seconds, latitude, longitude, depth, rms\mbox{]} of the high-\/precision hypocenter
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em line} & string with S\+E\+I\+S\+AN\textquotesingle{}s Nordic hypocenter format (Line 1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}seconds, latitude, longitude, depth, rms\mbox{]} 
+\end{DoxyReturn}

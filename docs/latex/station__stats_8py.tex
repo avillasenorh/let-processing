@@ -1,0 +1,94 @@
+\hypertarget{station__stats_8py}{}\doxysection{src/station\+\_\+stats.py File Reference}
+\label{station__stats_8py}\index{src/station\_stats.py@{src/station\_stats.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestation__stats}{station\+\_\+stats}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8a8eb2dca0de3a2b1b7d0f32b640fba2}{station\+\_\+stats.\+station\+\_\+file}} = sys.\+argv\mbox{[}1\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a27eae9b7f3f3596b749adfd941fd26d4}{station\+\_\+stats.\+nordic\+\_\+file}} = sys.\+argv\mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station\+\_\+stats.\+station}} = sys.\+argv\mbox{[}3\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacestation__stats_ab158c9130aabb784b672da9b8054fb97}{station\+\_\+stats.\+fields}} = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}network\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}elevation\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a55e99b37f255e0139b6564015ec898a6}{station\+\_\+stats.\+df}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{station\+\_\+stats.\+matches}} = df.\+index\mbox{[}df\mbox{[}\textquotesingle{}station\textquotesingle{}\mbox{]} == station\mbox{]}.tolist()
+\item 
+\mbox{\hyperlink{namespacestation__stats_a55fcf2e74ac6c7d3907efb61796638f1}{station\+\_\+stats.\+total\+\_\+matches}} = len(matches)
+\item 
+\mbox{\hyperlink{namespacestation__stats_a72dcf619f99dc79678ffa834151c46a5}{station\+\_\+stats.\+sta\+\_\+lat}} = df.\+iloc\mbox{[}matches\mbox{[}0\mbox{]}\mbox{]}\mbox{[}\textquotesingle{}latitude\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ab03a0d2a732bc6fdde53e281ec3879fc}{station\+\_\+stats.\+sta\+\_\+lon}} = df.\+iloc\mbox{[}matches\mbox{[}0\mbox{]}\mbox{]}\mbox{[}\textquotesingle{}longitude\textquotesingle{}\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacestation__stats_a626329dda94f327d5558b1cf4fb18589}{station\+\_\+stats.\+column\+\_\+names}} = \mbox{[}\textquotesingle{}phase\textquotesingle{}, \textquotesingle{}pick\textquotesingle{}, \textquotesingle{}residual\textquotesingle{}, \textquotesingle{}distance\textquotesingle{}, \textquotesingle{}azimuth\textquotesingle{}, \textquotesingle{}ot\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}depth\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ac4557e80186e09e647999d2ff7e48a53}{station\+\_\+stats.\+dfs}} = pd.\+Data\+Frame(columns = column\+\_\+names)
+\item 
+int \mbox{\hyperlink{namespacestation__stats_a1664e20e4417806f98d540fe034fdfa8}{station\+\_\+stats.\+num\+\_\+lines}} = 0
+\item 
+int \mbox{\hyperlink{namespacestation__stats_a72d8975dea05c63177907d3229c59585}{station\+\_\+stats.\+line\+\_\+count}} = 0
+\item 
+bool \mbox{\hyperlink{namespacestation__stats_ac0a5bc598cae25701c3a20736d2cec8e}{station\+\_\+stats.\+in\+\_\+event}} = False
+\item 
+bool \mbox{\hyperlink{namespacestation__stats_ad4aadccef0290f5c36c6478568cc35ba}{station\+\_\+stats.\+in\+\_\+header}} = True
+\item 
+\mbox{\hyperlink{namespacestation__stats_a03042cb98ad64986df00beef0a398025}{station\+\_\+stats.\+hypocenter}} = \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{nordic.\+read\+\_\+line1}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__stats_abb6255e5848999aed635014f783a9ddc}{station\+\_\+stats.\+second}}
+\item 
+string \mbox{\hyperlink{namespacestation__stats_a5c3fe919ba89962997dd54bdcd7e6d1f}{station\+\_\+stats.\+ot\+\_\+iso}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ade51ab74d3b29fb25af8943402689321}{station\+\_\+stats.\+ot}} = datetime.\+fromisoformat(ot\+\_\+iso)
+\item 
+\mbox{\hyperlink{namespacestation__stats_af5d1497dad01aef6e6b150fbe158bb36}{station\+\_\+stats.\+pick}} = \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{nordic.\+read\+\_\+line4}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__stats_ad74bbba73b1d770c7e13eae4ebc603d2}{station\+\_\+stats.\+phase}} = pick.\+phase
+\item 
+string \mbox{\hyperlink{namespacestation__stats_a01f68f9fc4955d13e5d73ae97b97879f}{station\+\_\+stats.\+pick\+\_\+iso}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ae52ada1f02518f82ff66abbe2dbdd42d}{station\+\_\+stats.\+pick\+\_\+time}} = datetime.\+fromisoformat(pick\+\_\+iso)
+\item 
+dictionary \mbox{\hyperlink{namespacestation__stats_ac97257a42ea02e43c80dc6de429ff327}{station\+\_\+stats.\+phase\+\_\+dict}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a581aed2663961b4ece529c2418ab52db}{station\+\_\+stats.\+dfp}} = dfs\mbox{[}dfs.\+phase == \textquotesingle{}P\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ad15e68858bc20433b009869525877b3a}{station\+\_\+stats.\+style}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a5ca3a04bef0f6718845908df3b09db1c}{station\+\_\+stats.\+g}} = sns.\+distplot(dfp\mbox{[}\mbox{[}\textquotesingle{}distance\textquotesingle{}\mbox{]}\mbox{]}, bins=20, kde=False, rug=True)
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8506726f909712547dc62b427332d0bb}{station\+\_\+stats.\+dpi}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_aca88e932c93d31f647fb8b9fac7f0e2d}{station\+\_\+stats.\+x}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a3969ec83a1d1d2acf49c4f67a1e1a3c0}{station\+\_\+stats.\+y}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ae0706c61407e9234fd0f2c5e7327f279}{station\+\_\+stats.\+data}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a38ea8e6ad899ed2f0aba2a6e97d52b0a}{station\+\_\+stats.\+kdeplot}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a4b0c33ef0a76061e9b0437871d93b723}{station\+\_\+stats.\+zorder}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a6d3b4ebb75f1bad96bf4746148f93530}{station\+\_\+stats.\+n\+\_\+levels}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a6a455b406d6aa16ce889e75f25ac40bf}{station\+\_\+stats.\+s}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a35c76f127608ebc657b2f22e66e0b156}{station\+\_\+stats.\+fig}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a6367a9b1961ee7521eb5faf38344928f}{station\+\_\+stats.\+ax}} = plt.\+axes(projection=ccrs.\+Plate\+Carree())
+\item 
+list \mbox{\hyperlink{namespacestation__stats_a59c3325a21e16b3478a2652a95ed9f43}{station\+\_\+stats.\+extent}} = \mbox{[}-\/17.\+5, -\/15.\+0, 27.\+5, 29.\+0\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a48ae9fdbabd05b5fd4e3091a8f1af598}{station\+\_\+stats.\+resolution}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8b57a2e78083c5c5b0a2221782e7802b}{station\+\_\+stats.\+marker}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8ee9a1f0c61bcf65a7a5d193364246d2}{station\+\_\+stats.\+color}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_acf25656374517dd6fa6cd0e18f69aa4d}{station\+\_\+stats.\+transform}}
+\end{DoxyCompactItemize}

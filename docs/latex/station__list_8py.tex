@@ -10,9 +10,11 @@
 \item 
 \mbox{\hyperlink{namespacestation__list_a4d583ea107489b62ef45b66bcab9e18f}{station\+\_\+list.\+station\+\_\+file}} = sys.\+argv\mbox{[}1\mbox{]}
 \item 
+\mbox{\hyperlink{namespacestation__list_a5b970693ec956810886b8d4497ab31aa}{station\+\_\+list.\+nordic\+\_\+file}} = sys.\+argv\mbox{[}2\mbox{]}
+\item 
 list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{station\+\_\+list.\+fields}} = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}network\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}elevation\textquotesingle{}\mbox{]}
 \item 
-\mbox{\hyperlink{namespacestation__list_ad85332a602bcae60ed5fc40fc965b08d}{station\+\_\+list.\+df}} = pd.\+read\+\_\+table(station\+\_\+file, delim\+\_\+whitespace=True, header=None, usecols = \mbox{[}0, 1, 2, 3, 4\mbox{]}, names=fields)
+\mbox{\hyperlink{namespacestation__list_ad85332a602bcae60ed5fc40fc965b08d}{station\+\_\+list.\+df}}
 \item 
 \mbox{\hyperlink{namespacestation__list_ac6633f830d261c0c39a8c19aec4c6518}{station\+\_\+list.\+num\+\_\+stations}}
 \item 
@@ -23,4 +25,32 @@ list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{
 \mbox{\hyperlink{namespacestation__list_a91de465fa4f9393a79924b15d3d31f1d}{station\+\_\+list.\+az}}
 \item 
 \mbox{\hyperlink{namespacestation__list_a6d503ebf8eca2db1df822b01338f8825}{station\+\_\+list.\+baz}}
+\item 
+\mbox{\hyperlink{namespacestation__list_a7172723feba24004cc727533249e5785}{station\+\_\+list.\+dfi}} = df.\+set\+\_\+index(\textquotesingle{}station\textquotesingle{})
+\item 
+list \mbox{\hyperlink{namespacestation__list_a6ae1c9e772f40f701269337f31bad9e0}{station\+\_\+list.\+zeros}} = \mbox{[}0\mbox{]} $\ast$ num\+\_\+stations
+\item 
+list \mbox{\hyperlink{namespacestation__list_a14248eadf453a29c3d2e02915eed66c7}{station\+\_\+list.\+cols}} = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}num\+\_\+p\textquotesingle{}, \textquotesingle{}num\+\_\+s\textquotesingle{}, \textquotesingle{}start\+\_\+date\textquotesingle{}, \textquotesingle{}end\+\_\+date\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__list_a6a36057aa73e432cb1c7e1cf2df82461}{station\+\_\+list.\+df\+\_\+missing}} = pd.\+Data\+Frame(columns = cols).set\+\_\+index(\textquotesingle{}station\textquotesingle{})
+\item 
+int \mbox{\hyperlink{namespacestation__list_ac2bf83ad1bb79123782290915bd91676}{station\+\_\+list.\+num\+\_\+lines}} = 0
+\item 
+int \mbox{\hyperlink{namespacestation__list_ac4f53b7c24e7fc1d483cb8eddefe7eae}{station\+\_\+list.\+line\+\_\+count}} = 0
+\item 
+bool \mbox{\hyperlink{namespacestation__list_ab456527ce2b83010e5da34b9800f99f7}{station\+\_\+list.\+in\+\_\+event}} = False
+\item 
+bool \mbox{\hyperlink{namespacestation__list_adaf99c8bc0a3ec739bf3630a2a451ec7}{station\+\_\+list.\+in\+\_\+header}} = True
+\item 
+\mbox{\hyperlink{namespacestation__list_adce7df1894e7309fc0013ab6397b5f6d}{station\+\_\+list.\+hypocenter}} = \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{nordic.\+read\+\_\+line1}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__list_adbfb2752369714948f46f97e82438e38}{station\+\_\+list.\+pick}} = \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{nordic.\+read\+\_\+line4}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__list_a37d39b7491607392be8a616307e98783}{station\+\_\+list.\+phase}} = pick.\+phase
+\item 
+\mbox{\hyperlink{namespacestation__list_a450a8e974d43c0bb65508483777d9db1}{station\+\_\+list.\+phase\+\_\+second}} = math.\+floor(pick.\+second)
+\item 
+\mbox{\hyperlink{namespacestation__list_a579b4cad0267d6a99e767fbe12c3800f}{station\+\_\+list.\+phase\+\_\+time}}
+\item 
+list \mbox{\hyperlink{namespacestation__list_a4fd4241cd4f74bb084a0ed78dad39a9e}{station\+\_\+list.\+extent}} = \mbox{[}-\/17.\+5, -\/15.\+0, 27.\+5, 29.\+0\mbox{]}
 \end{DoxyCompactItemize}

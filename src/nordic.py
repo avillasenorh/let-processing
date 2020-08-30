@@ -181,6 +181,17 @@ def read_line1(line):
     mag1, mag_type1, mag_agency1, mag2, mag_type2, mag_agency2, mag3, mag_type3, mag_agency3)
 
 def read_lineH(line):
+    """! Function read_lineH
+    
+    Reads as argument a string formatted as a Line H in SEISAN's Nordic format,
+    corresponding to a high-precision hypocenter
+ 
+    Returns a list with [seconds, latitude, longitude, depth, rms] of the high-precision
+    hypocenter
+
+    @param[in]   line   string with SEISAN's Nordic hypocenter format (Line 1)
+    @return      [seconds, latitude, longitude, depth, rms]
+    """
 
     if not line[16:22].isspace():
         seconds = float(line[16:22])

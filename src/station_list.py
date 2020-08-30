@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""! Makes some basic statistics for stations in a local earthquake dataset
+"""! station_list.py
 
+@brief Makes some basic statistics for stations in a local earthquake dataset
+
+Arguments:
+station_file
+nordic file
 
 Created on Sat Aug 22 17:11:22 2020
 

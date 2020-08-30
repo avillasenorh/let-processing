@@ -1,0 +1,378 @@
+\hypertarget{namespacestation__stats}{}\doxysection{station\+\_\+stats Namespace Reference}
+\label{namespacestation__stats}\index{station\_stats@{station\_stats}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8a8eb2dca0de3a2b1b7d0f32b640fba2}{station\+\_\+file}} = sys.\+argv\mbox{[}1\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a27eae9b7f3f3596b749adfd941fd26d4}{nordic\+\_\+file}} = sys.\+argv\mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}} = sys.\+argv\mbox{[}3\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacestation__stats_ab158c9130aabb784b672da9b8054fb97}{fields}} = \mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}}\textquotesingle{}, \textquotesingle{}network\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}elevation\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a55e99b37f255e0139b6564015ec898a6}{df}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}} = df.\+index\mbox{[}\mbox{\hyperlink{namespacestation__stats_a55e99b37f255e0139b6564015ec898a6}{df}}\mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}}\textquotesingle{}\mbox{]} == \mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}}\mbox{]}.tolist()
+\item 
+\mbox{\hyperlink{namespacestation__stats_a55fcf2e74ac6c7d3907efb61796638f1}{total\+\_\+matches}} = len(\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}})
+\item 
+\mbox{\hyperlink{namespacestation__stats_a72dcf619f99dc79678ffa834151c46a5}{sta\+\_\+lat}} = df.\+iloc\mbox{[}\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}}\mbox{[}0\mbox{]}\mbox{]}\mbox{[}\textquotesingle{}latitude\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ab03a0d2a732bc6fdde53e281ec3879fc}{sta\+\_\+lon}} = df.\+iloc\mbox{[}\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}}\mbox{[}0\mbox{]}\mbox{]}\mbox{[}\textquotesingle{}longitude\textquotesingle{}\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacestation__stats_a626329dda94f327d5558b1cf4fb18589}{column\+\_\+names}} = \mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacestation__stats_ad74bbba73b1d770c7e13eae4ebc603d2}{phase}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{namespacestation__stats_af5d1497dad01aef6e6b150fbe158bb36}{pick}}\textquotesingle{}, \textquotesingle{}residual\textquotesingle{}, \textquotesingle{}distance\textquotesingle{}, \textquotesingle{}azimuth\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{namespacestation__stats_ade51ab74d3b29fb25af8943402689321}{ot}}\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}depth\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ac4557e80186e09e647999d2ff7e48a53}{dfs}} = pd.\+Data\+Frame(columns = \mbox{\hyperlink{namespacestation__stats_a626329dda94f327d5558b1cf4fb18589}{column\+\_\+names}})
+\item 
+int \mbox{\hyperlink{namespacestation__stats_a1664e20e4417806f98d540fe034fdfa8}{num\+\_\+lines}} = 0
+\item 
+int \mbox{\hyperlink{namespacestation__stats_a72d8975dea05c63177907d3229c59585}{line\+\_\+count}} = 0
+\item 
+bool \mbox{\hyperlink{namespacestation__stats_ac0a5bc598cae25701c3a20736d2cec8e}{in\+\_\+event}} = False
+\item 
+bool \mbox{\hyperlink{namespacestation__stats_ad4aadccef0290f5c36c6478568cc35ba}{in\+\_\+header}} = True
+\item 
+\mbox{\hyperlink{namespacestation__stats_a03042cb98ad64986df00beef0a398025}{hypocenter}} = \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{nordic.\+read\+\_\+line1}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__stats_abb6255e5848999aed635014f783a9ddc}{second}}
+\item 
+string \mbox{\hyperlink{namespacestation__stats_a5c3fe919ba89962997dd54bdcd7e6d1f}{ot\+\_\+iso}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ade51ab74d3b29fb25af8943402689321}{ot}} = datetime.\+fromisoformat(\mbox{\hyperlink{namespacestation__stats_a5c3fe919ba89962997dd54bdcd7e6d1f}{ot\+\_\+iso}})
+\item 
+\mbox{\hyperlink{namespacestation__stats_af5d1497dad01aef6e6b150fbe158bb36}{pick}} = \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{nordic.\+read\+\_\+line4}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__stats_ad74bbba73b1d770c7e13eae4ebc603d2}{phase}} = pick.\+phase
+\item 
+string \mbox{\hyperlink{namespacestation__stats_a01f68f9fc4955d13e5d73ae97b97879f}{pick\+\_\+iso}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ae52ada1f02518f82ff66abbe2dbdd42d}{pick\+\_\+time}} = datetime.\+fromisoformat(\mbox{\hyperlink{namespacestation__stats_a01f68f9fc4955d13e5d73ae97b97879f}{pick\+\_\+iso}})
+\item 
+dictionary \mbox{\hyperlink{namespacestation__stats_ac97257a42ea02e43c80dc6de429ff327}{phase\+\_\+dict}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a581aed2663961b4ece529c2418ab52db}{dfp}} = \mbox{\hyperlink{namespacestation__stats_ac4557e80186e09e647999d2ff7e48a53}{dfs}}\mbox{[}dfs.\+phase == \textquotesingle{}P\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ad15e68858bc20433b009869525877b3a}{style}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a5ca3a04bef0f6718845908df3b09db1c}{g}} = sns.\+distplot(\mbox{\hyperlink{namespacestation__stats_a581aed2663961b4ece529c2418ab52db}{dfp}}\mbox{[}\mbox{[}\textquotesingle{}distance\textquotesingle{}\mbox{]}\mbox{]}, bins=20, kde=False, rug=True)
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8506726f909712547dc62b427332d0bb}{dpi}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_aca88e932c93d31f647fb8b9fac7f0e2d}{x}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a3969ec83a1d1d2acf49c4f67a1e1a3c0}{y}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_ae0706c61407e9234fd0f2c5e7327f279}{data}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a38ea8e6ad899ed2f0aba2a6e97d52b0a}{kdeplot}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a4b0c33ef0a76061e9b0437871d93b723}{zorder}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a6d3b4ebb75f1bad96bf4746148f93530}{n\+\_\+levels}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a6a455b406d6aa16ce889e75f25ac40bf}{s}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a35c76f127608ebc657b2f22e66e0b156}{fig}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a6367a9b1961ee7521eb5faf38344928f}{ax}} = plt.\+axes(projection=ccrs.\+Plate\+Carree())
+\item 
+list \mbox{\hyperlink{namespacestation__stats_a59c3325a21e16b3478a2652a95ed9f43}{extent}} = \mbox{[}-\/17.\+5, -\/15.\+0, 27.\+5, 29.\+0\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a48ae9fdbabd05b5fd4e3091a8f1af598}{resolution}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8b57a2e78083c5c5b0a2221782e7802b}{marker}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_a8ee9a1f0c61bcf65a7a5d193364246d2}{color}}
+\item 
+\mbox{\hyperlink{namespacestation__stats_acf25656374517dd6fa6cd0e18f69aa4d}{transform}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacestation__stats_a6367a9b1961ee7521eb5faf38344928f}\label{namespacestation__stats_a6367a9b1961ee7521eb5faf38344928f}} 
+\index{station\_stats@{station\_stats}!ax@{ax}}
+\index{ax@{ax}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{ax}{ax}}
+{\footnotesize\ttfamily station\+\_\+stats.\+ax = plt.\+axes(projection=ccrs.\+Plate\+Carree())}
+
+\mbox{\Hypertarget{namespacestation__stats_a8ee9a1f0c61bcf65a7a5d193364246d2}\label{namespacestation__stats_a8ee9a1f0c61bcf65a7a5d193364246d2}} 
+\index{station\_stats@{station\_stats}!color@{color}}
+\index{color@{color}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily station\+\_\+stats.\+color}
+
+\mbox{\Hypertarget{namespacestation__stats_a626329dda94f327d5558b1cf4fb18589}\label{namespacestation__stats_a626329dda94f327d5558b1cf4fb18589}} 
+\index{station\_stats@{station\_stats}!column\_names@{column\_names}}
+\index{column\_names@{column\_names}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{column\_names}{column\_names}}
+{\footnotesize\ttfamily list station\+\_\+stats.\+column\+\_\+names = \mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacestation__stats_ad74bbba73b1d770c7e13eae4ebc603d2}{phase}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{namespacestation__stats_af5d1497dad01aef6e6b150fbe158bb36}{pick}}\textquotesingle{}, \textquotesingle{}residual\textquotesingle{}, \textquotesingle{}distance\textquotesingle{}, \textquotesingle{}azimuth\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{namespacestation__stats_ade51ab74d3b29fb25af8943402689321}{ot}}\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}depth\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_ae0706c61407e9234fd0f2c5e7327f279}\label{namespacestation__stats_ae0706c61407e9234fd0f2c5e7327f279}} 
+\index{station\_stats@{station\_stats}!data@{data}}
+\index{data@{data}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily station\+\_\+stats.\+data}
+
+\mbox{\Hypertarget{namespacestation__stats_a55e99b37f255e0139b6564015ec898a6}\label{namespacestation__stats_a55e99b37f255e0139b6564015ec898a6}} 
+\index{station\_stats@{station\_stats}!df@{df}}
+\index{df@{df}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily station\+\_\+stats.\+df}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  pd.read\_table(station\_file, delim\_whitespace=\textcolor{keyword}{True}, header=\textcolor{keywordtype}{None},}
+\DoxyCodeLine{2      usecols = [0, 1, 2, 3, 4], names=fields)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacestation__stats_a581aed2663961b4ece529c2418ab52db}\label{namespacestation__stats_a581aed2663961b4ece529c2418ab52db}} 
+\index{station\_stats@{station\_stats}!dfp@{dfp}}
+\index{dfp@{dfp}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{dfp}{dfp}}
+{\footnotesize\ttfamily station\+\_\+stats.\+dfp = \mbox{\hyperlink{namespacestation__stats_ac4557e80186e09e647999d2ff7e48a53}{dfs}}\mbox{[}dfs.\+phase == \textquotesingle{}P\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_ac4557e80186e09e647999d2ff7e48a53}\label{namespacestation__stats_ac4557e80186e09e647999d2ff7e48a53}} 
+\index{station\_stats@{station\_stats}!dfs@{dfs}}
+\index{dfs@{dfs}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{dfs}{dfs}}
+{\footnotesize\ttfamily station\+\_\+stats.\+dfs = pd.\+Data\+Frame(columns = \mbox{\hyperlink{namespacestation__stats_a626329dda94f327d5558b1cf4fb18589}{column\+\_\+names}})}
+
+\mbox{\Hypertarget{namespacestation__stats_a8506726f909712547dc62b427332d0bb}\label{namespacestation__stats_a8506726f909712547dc62b427332d0bb}} 
+\index{station\_stats@{station\_stats}!dpi@{dpi}}
+\index{dpi@{dpi}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{dpi}{dpi}}
+{\footnotesize\ttfamily station\+\_\+stats.\+dpi}
+
+\mbox{\Hypertarget{namespacestation__stats_a59c3325a21e16b3478a2652a95ed9f43}\label{namespacestation__stats_a59c3325a21e16b3478a2652a95ed9f43}} 
+\index{station\_stats@{station\_stats}!extent@{extent}}
+\index{extent@{extent}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{extent}{extent}}
+{\footnotesize\ttfamily list station\+\_\+stats.\+extent = \mbox{[}-\/17.\+5, -\/15.\+0, 27.\+5, 29.\+0\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_ab158c9130aabb784b672da9b8054fb97}\label{namespacestation__stats_ab158c9130aabb784b672da9b8054fb97}} 
+\index{station\_stats@{station\_stats}!fields@{fields}}
+\index{fields@{fields}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{fields}{fields}}
+{\footnotesize\ttfamily list station\+\_\+stats.\+fields = \mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}}\textquotesingle{}, \textquotesingle{}network\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}elevation\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_a35c76f127608ebc657b2f22e66e0b156}\label{namespacestation__stats_a35c76f127608ebc657b2f22e66e0b156}} 
+\index{station\_stats@{station\_stats}!fig@{fig}}
+\index{fig@{fig}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{fig}{fig}}
+{\footnotesize\ttfamily station\+\_\+stats.\+fig}
+
+\mbox{\Hypertarget{namespacestation__stats_a5ca3a04bef0f6718845908df3b09db1c}\label{namespacestation__stats_a5ca3a04bef0f6718845908df3b09db1c}} 
+\index{station\_stats@{station\_stats}!g@{g}}
+\index{g@{g}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily station\+\_\+stats.\+g = sns.\+distplot(\mbox{\hyperlink{namespacestation__stats_a581aed2663961b4ece529c2418ab52db}{dfp}}\mbox{[}\mbox{[}\textquotesingle{}distance\textquotesingle{}\mbox{]}\mbox{]}, bins=20, kde=False, rug=True)}
+
+\mbox{\Hypertarget{namespacestation__stats_a03042cb98ad64986df00beef0a398025}\label{namespacestation__stats_a03042cb98ad64986df00beef0a398025}} 
+\index{station\_stats@{station\_stats}!hypocenter@{hypocenter}}
+\index{hypocenter@{hypocenter}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{hypocenter}{hypocenter}}
+{\footnotesize\ttfamily station\+\_\+stats.\+hypocenter = \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{nordic.\+read\+\_\+line1}}(line)}
+
+\mbox{\Hypertarget{namespacestation__stats_ac0a5bc598cae25701c3a20736d2cec8e}\label{namespacestation__stats_ac0a5bc598cae25701c3a20736d2cec8e}} 
+\index{station\_stats@{station\_stats}!in\_event@{in\_event}}
+\index{in\_event@{in\_event}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{in\_event}{in\_event}}
+{\footnotesize\ttfamily bool station\+\_\+stats.\+in\+\_\+event = False}
+
+\mbox{\Hypertarget{namespacestation__stats_ad4aadccef0290f5c36c6478568cc35ba}\label{namespacestation__stats_ad4aadccef0290f5c36c6478568cc35ba}} 
+\index{station\_stats@{station\_stats}!in\_header@{in\_header}}
+\index{in\_header@{in\_header}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{in\_header}{in\_header}}
+{\footnotesize\ttfamily bool station\+\_\+stats.\+in\+\_\+header = True}
+
+\mbox{\Hypertarget{namespacestation__stats_a38ea8e6ad899ed2f0aba2a6e97d52b0a}\label{namespacestation__stats_a38ea8e6ad899ed2f0aba2a6e97d52b0a}} 
+\index{station\_stats@{station\_stats}!kdeplot@{kdeplot}}
+\index{kdeplot@{kdeplot}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{kdeplot}{kdeplot}}
+{\footnotesize\ttfamily station\+\_\+stats.\+kdeplot}
+
+\mbox{\Hypertarget{namespacestation__stats_a72d8975dea05c63177907d3229c59585}\label{namespacestation__stats_a72d8975dea05c63177907d3229c59585}} 
+\index{station\_stats@{station\_stats}!line\_count@{line\_count}}
+\index{line\_count@{line\_count}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{line\_count}{line\_count}}
+{\footnotesize\ttfamily int station\+\_\+stats.\+line\+\_\+count = 0}
+
+\mbox{\Hypertarget{namespacestation__stats_a8b57a2e78083c5c5b0a2221782e7802b}\label{namespacestation__stats_a8b57a2e78083c5c5b0a2221782e7802b}} 
+\index{station\_stats@{station\_stats}!marker@{marker}}
+\index{marker@{marker}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily station\+\_\+stats.\+marker}
+
+\mbox{\Hypertarget{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}\label{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}} 
+\index{station\_stats@{station\_stats}!matches@{matches}}
+\index{matches@{matches}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{matches}{matches}}
+{\footnotesize\ttfamily station\+\_\+stats.\+matches = df.\+index\mbox{[}\mbox{\hyperlink{namespacestation__stats_a55e99b37f255e0139b6564015ec898a6}{df}}\mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}}\textquotesingle{}\mbox{]} == \mbox{\hyperlink{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}{station}}\mbox{]}.tolist()}
+
+\mbox{\Hypertarget{namespacestation__stats_a6d3b4ebb75f1bad96bf4746148f93530}\label{namespacestation__stats_a6d3b4ebb75f1bad96bf4746148f93530}} 
+\index{station\_stats@{station\_stats}!n\_levels@{n\_levels}}
+\index{n\_levels@{n\_levels}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{n\_levels}{n\_levels}}
+{\footnotesize\ttfamily station\+\_\+stats.\+n\+\_\+levels}
+
+\mbox{\Hypertarget{namespacestation__stats_a27eae9b7f3f3596b749adfd941fd26d4}\label{namespacestation__stats_a27eae9b7f3f3596b749adfd941fd26d4}} 
+\index{station\_stats@{station\_stats}!nordic\_file@{nordic\_file}}
+\index{nordic\_file@{nordic\_file}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{nordic\_file}{nordic\_file}}
+{\footnotesize\ttfamily station\+\_\+stats.\+nordic\+\_\+file = sys.\+argv\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_a1664e20e4417806f98d540fe034fdfa8}\label{namespacestation__stats_a1664e20e4417806f98d540fe034fdfa8}} 
+\index{station\_stats@{station\_stats}!num\_lines@{num\_lines}}
+\index{num\_lines@{num\_lines}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{num\_lines}{num\_lines}}
+{\footnotesize\ttfamily int station\+\_\+stats.\+num\+\_\+lines = 0}
+
+\mbox{\Hypertarget{namespacestation__stats_ade51ab74d3b29fb25af8943402689321}\label{namespacestation__stats_ade51ab74d3b29fb25af8943402689321}} 
+\index{station\_stats@{station\_stats}!ot@{ot}}
+\index{ot@{ot}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{ot}{ot}}
+{\footnotesize\ttfamily station\+\_\+stats.\+ot = datetime.\+fromisoformat(\mbox{\hyperlink{namespacestation__stats_a5c3fe919ba89962997dd54bdcd7e6d1f}{ot\+\_\+iso}})}
+
+\mbox{\Hypertarget{namespacestation__stats_a5c3fe919ba89962997dd54bdcd7e6d1f}\label{namespacestation__stats_a5c3fe919ba89962997dd54bdcd7e6d1f}} 
+\index{station\_stats@{station\_stats}!ot\_iso@{ot\_iso}}
+\index{ot\_iso@{ot\_iso}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{ot\_iso}{ot\_iso}}
+{\footnotesize\ttfamily string station\+\_\+stats.\+ot\+\_\+iso}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{'\{0:4d\}-\/\{1:02d\}-\/\{2:02d\} \{3:02d\}:\{4:02d\}:\{5:09.6f\}'}.format( \(\backslash\)}
+\DoxyCodeLine{2                      hypocenter.year, hypocenter.month, hypocenter.day, hypocenter.hour, \(\backslash\)}
+\DoxyCodeLine{3                      hypocenter.minute, hypocenter.second)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacestation__stats_ad74bbba73b1d770c7e13eae4ebc603d2}\label{namespacestation__stats_ad74bbba73b1d770c7e13eae4ebc603d2}} 
+\index{station\_stats@{station\_stats}!phase@{phase}}
+\index{phase@{phase}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily station\+\_\+stats.\+phase = pick.\+phase}
+
+\mbox{\Hypertarget{namespacestation__stats_ac97257a42ea02e43c80dc6de429ff327}\label{namespacestation__stats_ac97257a42ea02e43c80dc6de429ff327}} 
+\index{station\_stats@{station\_stats}!phase\_dict@{phase\_dict}}
+\index{phase\_dict@{phase\_dict}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{phase\_dict}{phase\_dict}}
+{\footnotesize\ttfamily dictionary station\+\_\+stats.\+phase\+\_\+dict}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2                     \textcolor{stringliteral}{'phase'}: pick.phase,}
+\DoxyCodeLine{3                     \textcolor{stringliteral}{'pick'}: pick.phase,}
+\DoxyCodeLine{4                     \textcolor{stringliteral}{'residual'}: pick.residual,}
+\DoxyCodeLine{5                     \textcolor{stringliteral}{'distance'}: pick.distance,}
+\DoxyCodeLine{6                     \textcolor{stringliteral}{'azimuth'}: pick.azimuth,}
+\DoxyCodeLine{7                     \textcolor{stringliteral}{'ot'}: ot,}
+\DoxyCodeLine{8                     \textcolor{stringliteral}{'latitude'}: hypocenter.latitude,}
+\DoxyCodeLine{9                     \textcolor{stringliteral}{'longitude'}: hypocenter.longitude,}
+\DoxyCodeLine{10                     \textcolor{stringliteral}{'depth'}: hypocenter.depth \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacestation__stats_af5d1497dad01aef6e6b150fbe158bb36}\label{namespacestation__stats_af5d1497dad01aef6e6b150fbe158bb36}} 
+\index{station\_stats@{station\_stats}!pick@{pick}}
+\index{pick@{pick}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{pick}{pick}}
+{\footnotesize\ttfamily station\+\_\+stats.\+pick = \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{nordic.\+read\+\_\+line4}}(line)}
+
+\mbox{\Hypertarget{namespacestation__stats_a01f68f9fc4955d13e5d73ae97b97879f}\label{namespacestation__stats_a01f68f9fc4955d13e5d73ae97b97879f}} 
+\index{station\_stats@{station\_stats}!pick\_iso@{pick\_iso}}
+\index{pick\_iso@{pick\_iso}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{pick\_iso}{pick\_iso}}
+{\footnotesize\ttfamily string station\+\_\+stats.\+pick\+\_\+iso}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{'\{0:4d\}-\/\{1:02d\}-\/\{2:02d\} \{3:02d\}:\{4:02d\}:\{5:09.6f\}'}.format( \(\backslash\)}
+\DoxyCodeLine{2                      hypocenter.year, hypocenter.month, hypocenter.day, pick.hour, \(\backslash\)}
+\DoxyCodeLine{3                      pick.minute, pick.second)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacestation__stats_ae52ada1f02518f82ff66abbe2dbdd42d}\label{namespacestation__stats_ae52ada1f02518f82ff66abbe2dbdd42d}} 
+\index{station\_stats@{station\_stats}!pick\_time@{pick\_time}}
+\index{pick\_time@{pick\_time}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{pick\_time}{pick\_time}}
+{\footnotesize\ttfamily station\+\_\+stats.\+pick\+\_\+time = datetime.\+fromisoformat(\mbox{\hyperlink{namespacestation__stats_a01f68f9fc4955d13e5d73ae97b97879f}{pick\+\_\+iso}})}
+
+\mbox{\Hypertarget{namespacestation__stats_a48ae9fdbabd05b5fd4e3091a8f1af598}\label{namespacestation__stats_a48ae9fdbabd05b5fd4e3091a8f1af598}} 
+\index{station\_stats@{station\_stats}!resolution@{resolution}}
+\index{resolution@{resolution}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{resolution}{resolution}}
+{\footnotesize\ttfamily station\+\_\+stats.\+resolution}
+
+\mbox{\Hypertarget{namespacestation__stats_a6a455b406d6aa16ce889e75f25ac40bf}\label{namespacestation__stats_a6a455b406d6aa16ce889e75f25ac40bf}} 
+\index{station\_stats@{station\_stats}!s@{s}}
+\index{s@{s}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily station\+\_\+stats.\+s}
+
+\mbox{\Hypertarget{namespacestation__stats_abb6255e5848999aed635014f783a9ddc}\label{namespacestation__stats_abb6255e5848999aed635014f783a9ddc}} 
+\index{station\_stats@{station\_stats}!second@{second}}
+\index{second@{second}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{second}{second}}
+{\footnotesize\ttfamily station\+\_\+stats.\+second}
+
+\mbox{\Hypertarget{namespacestation__stats_a72dcf619f99dc79678ffa834151c46a5}\label{namespacestation__stats_a72dcf619f99dc79678ffa834151c46a5}} 
+\index{station\_stats@{station\_stats}!sta\_lat@{sta\_lat}}
+\index{sta\_lat@{sta\_lat}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{sta\_lat}{sta\_lat}}
+{\footnotesize\ttfamily station\+\_\+stats.\+sta\+\_\+lat = df.\+iloc\mbox{[}\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}}\mbox{[}0\mbox{]}\mbox{]}\mbox{[}\textquotesingle{}latitude\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_ab03a0d2a732bc6fdde53e281ec3879fc}\label{namespacestation__stats_ab03a0d2a732bc6fdde53e281ec3879fc}} 
+\index{station\_stats@{station\_stats}!sta\_lon@{sta\_lon}}
+\index{sta\_lon@{sta\_lon}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{sta\_lon}{sta\_lon}}
+{\footnotesize\ttfamily station\+\_\+stats.\+sta\+\_\+lon = df.\+iloc\mbox{[}\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}}\mbox{[}0\mbox{]}\mbox{]}\mbox{[}\textquotesingle{}longitude\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}\label{namespacestation__stats_a83aa52c01e98207573d3c705aeb36c5c}} 
+\index{station\_stats@{station\_stats}!station@{station}}
+\index{station@{station}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{station}{station}}
+{\footnotesize\ttfamily station\+\_\+stats.\+station = sys.\+argv\mbox{[}3\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_a8a8eb2dca0de3a2b1b7d0f32b640fba2}\label{namespacestation__stats_a8a8eb2dca0de3a2b1b7d0f32b640fba2}} 
+\index{station\_stats@{station\_stats}!station\_file@{station\_file}}
+\index{station\_file@{station\_file}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{station\_file}{station\_file}}
+{\footnotesize\ttfamily station\+\_\+stats.\+station\+\_\+file = sys.\+argv\mbox{[}1\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__stats_ad15e68858bc20433b009869525877b3a}\label{namespacestation__stats_ad15e68858bc20433b009869525877b3a}} 
+\index{station\_stats@{station\_stats}!style@{style}}
+\index{style@{style}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily station\+\_\+stats.\+style}
+
+\mbox{\Hypertarget{namespacestation__stats_a55fcf2e74ac6c7d3907efb61796638f1}\label{namespacestation__stats_a55fcf2e74ac6c7d3907efb61796638f1}} 
+\index{station\_stats@{station\_stats}!total\_matches@{total\_matches}}
+\index{total\_matches@{total\_matches}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{total\_matches}{total\_matches}}
+{\footnotesize\ttfamily station\+\_\+stats.\+total\+\_\+matches = len(\mbox{\hyperlink{namespacestation__stats_adf01a0259ac62428b5ea7540b90ad79b}{matches}})}
+
+\mbox{\Hypertarget{namespacestation__stats_acf25656374517dd6fa6cd0e18f69aa4d}\label{namespacestation__stats_acf25656374517dd6fa6cd0e18f69aa4d}} 
+\index{station\_stats@{station\_stats}!transform@{transform}}
+\index{transform@{transform}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily station\+\_\+stats.\+transform}
+
+\mbox{\Hypertarget{namespacestation__stats_aca88e932c93d31f647fb8b9fac7f0e2d}\label{namespacestation__stats_aca88e932c93d31f647fb8b9fac7f0e2d}} 
+\index{station\_stats@{station\_stats}!x@{x}}
+\index{x@{x}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily station\+\_\+stats.\+x}
+
+\mbox{\Hypertarget{namespacestation__stats_a3969ec83a1d1d2acf49c4f67a1e1a3c0}\label{namespacestation__stats_a3969ec83a1d1d2acf49c4f67a1e1a3c0}} 
+\index{station\_stats@{station\_stats}!y@{y}}
+\index{y@{y}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily station\+\_\+stats.\+y}
+
+\mbox{\Hypertarget{namespacestation__stats_a4b0c33ef0a76061e9b0437871d93b723}\label{namespacestation__stats_a4b0c33ef0a76061e9b0437871d93b723}} 
+\index{station\_stats@{station\_stats}!zorder@{zorder}}
+\index{zorder@{zorder}!station\_stats@{station\_stats}}
+\doxysubsubsection{\texorpdfstring{zorder}{zorder}}
+{\footnotesize\ttfamily station\+\_\+stats.\+zorder}
+

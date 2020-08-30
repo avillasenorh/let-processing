@@ -83,9 +83,11 @@ Namespaces</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a4d583ea107489b62ef45b66bcab9e18f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a4d583ea107489b62ef45b66bcab9e18f">station_list.station_file</a> = sys.argv[1]</td></tr>
 <tr class="separator:a4d583ea107489b62ef45b66bcab9e18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b970693ec956810886b8d4497ab31aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a5b970693ec956810886b8d4497ab31aa">station_list.nordic_file</a> = sys.argv[2]</td></tr>
+<tr class="separator:a5b970693ec956810886b8d4497ab31aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31a069dc8fe9c693c5c616ea8e08ebb"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ab31a069dc8fe9c693c5c616ea8e08ebb">station_list.fields</a> = ['station', 'network', 'latitude', 'longitude', 'elevation']</td></tr>
 <tr class="separator:ab31a069dc8fe9c693c5c616ea8e08ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85332a602bcae60ed5fc40fc965b08d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ad85332a602bcae60ed5fc40fc965b08d">station_list.df</a> = pd.read_table(station_file, delim_whitespace=True, header=None, usecols = [0, 1, 2, 3, 4], names=fields)</td></tr>
+<tr class="memitem:ad85332a602bcae60ed5fc40fc965b08d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ad85332a602bcae60ed5fc40fc965b08d">station_list.df</a></td></tr>
 <tr class="separator:ad85332a602bcae60ed5fc40fc965b08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6633f830d261c0c39a8c19aec4c6518"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ac6633f830d261c0c39a8c19aec4c6518">station_list.num_stations</a></td></tr>
 <tr class="separator:ac6633f830d261c0c39a8c19aec4c6518"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +99,34 @@ Variables</h2></td></tr>
 <tr class="separator:a91de465fa4f9393a79924b15d3d31f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d503ebf8eca2db1df822b01338f8825"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a6d503ebf8eca2db1df822b01338f8825">station_list.baz</a></td></tr>
 <tr class="separator:a6d503ebf8eca2db1df822b01338f8825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7172723feba24004cc727533249e5785"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a7172723feba24004cc727533249e5785">station_list.dfi</a> = df.set_index('station')</td></tr>
+<tr class="separator:a7172723feba24004cc727533249e5785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae1c9e772f40f701269337f31bad9e0"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a6ae1c9e772f40f701269337f31bad9e0">station_list.zeros</a> = [0] * num_stations</td></tr>
+<tr class="separator:a6ae1c9e772f40f701269337f31bad9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14248eadf453a29c3d2e02915eed66c7"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a14248eadf453a29c3d2e02915eed66c7">station_list.cols</a> = ['station', 'num_p', 'num_s', 'start_date', 'end_date']</td></tr>
+<tr class="separator:a14248eadf453a29c3d2e02915eed66c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a36057aa73e432cb1c7e1cf2df82461"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a6a36057aa73e432cb1c7e1cf2df82461">station_list.df_missing</a> = pd.DataFrame(columns = cols).set_index('station')</td></tr>
+<tr class="separator:a6a36057aa73e432cb1c7e1cf2df82461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bf83ad1bb79123782290915bd91676"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ac2bf83ad1bb79123782290915bd91676">station_list.num_lines</a> = 0</td></tr>
+<tr class="separator:ac2bf83ad1bb79123782290915bd91676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f53b7c24e7fc1d483cb8eddefe7eae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ac4f53b7c24e7fc1d483cb8eddefe7eae">station_list.line_count</a> = 0</td></tr>
+<tr class="separator:ac4f53b7c24e7fc1d483cb8eddefe7eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab456527ce2b83010e5da34b9800f99f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#ab456527ce2b83010e5da34b9800f99f7">station_list.in_event</a> = False</td></tr>
+<tr class="separator:ab456527ce2b83010e5da34b9800f99f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf99c8bc0a3ec739bf3630a2a451ec7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#adaf99c8bc0a3ec739bf3630a2a451ec7">station_list.in_header</a> = True</td></tr>
+<tr class="separator:adaf99c8bc0a3ec739bf3630a2a451ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce7df1894e7309fc0013ab6397b5f6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#adce7df1894e7309fc0013ab6397b5f6d">station_list.hypocenter</a> = <a class="el" href="namespacenordic.html#ae739882df35f008abbf75d841c55c9a0">nordic.read_line1</a>(line)</td></tr>
+<tr class="separator:adce7df1894e7309fc0013ab6397b5f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfb2752369714948f46f97e82438e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#adbfb2752369714948f46f97e82438e38">station_list.pick</a> = <a class="el" href="namespacenordic.html#a88e5f487e37a978b4b44f2662680aaf5">nordic.read_line4</a>(line)</td></tr>
+<tr class="separator:adbfb2752369714948f46f97e82438e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d39b7491607392be8a616307e98783"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a37d39b7491607392be8a616307e98783">station_list.phase</a> = pick.phase</td></tr>
+<tr class="separator:a37d39b7491607392be8a616307e98783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450a8e974d43c0bb65508483777d9db1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a450a8e974d43c0bb65508483777d9db1">station_list.phase_second</a> = math.floor(pick.second)</td></tr>
+<tr class="separator:a450a8e974d43c0bb65508483777d9db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579b4cad0267d6a99e767fbe12c3800f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a579b4cad0267d6a99e767fbe12c3800f">station_list.phase_time</a></td></tr>
+<tr class="separator:a579b4cad0267d6a99e767fbe12c3800f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd4241cd4f74bb084a0ed78dad39a9e"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestation__list.html#a4fd4241cd4f74bb084a0ed78dad39a9e">station_list.extent</a> = [-17.5, -15.0, 27.5, 29.0]</td></tr>
+<tr class="separator:a4fd4241cd4f74bb084a0ed78dad39a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

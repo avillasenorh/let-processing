@@ -5,9 +5,11 @@
 \item 
 \mbox{\hyperlink{namespacestation__list_a4d583ea107489b62ef45b66bcab9e18f}{station\+\_\+file}} = sys.\+argv\mbox{[}1\mbox{]}
 \item 
+\mbox{\hyperlink{namespacestation__list_a5b970693ec956810886b8d4497ab31aa}{nordic\+\_\+file}} = sys.\+argv\mbox{[}2\mbox{]}
+\item 
 list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{fields}} = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}network\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}elevation\textquotesingle{}\mbox{]}
 \item 
-\mbox{\hyperlink{namespacestation__list_ad85332a602bcae60ed5fc40fc965b08d}{df}} = pd.\+read\+\_\+table(\mbox{\hyperlink{namespacestation__list_a4d583ea107489b62ef45b66bcab9e18f}{station\+\_\+file}}, delim\+\_\+whitespace=True, header=None, usecols = \mbox{[}0, 1, 2, 3, 4\mbox{]}, names=\mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{fields}})
+\mbox{\hyperlink{namespacestation__list_ad85332a602bcae60ed5fc40fc965b08d}{df}}
 \item 
 \mbox{\hyperlink{namespacestation__list_ac6633f830d261c0c39a8c19aec4c6518}{num\+\_\+stations}}
 \item 
@@ -18,6 +20,34 @@ list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{
 \mbox{\hyperlink{namespacestation__list_a91de465fa4f9393a79924b15d3d31f1d}{az}}
 \item 
 \mbox{\hyperlink{namespacestation__list_a6d503ebf8eca2db1df822b01338f8825}{baz}}
+\item 
+\mbox{\hyperlink{namespacestation__list_a7172723feba24004cc727533249e5785}{dfi}} = df.\+set\+\_\+index(\textquotesingle{}station\textquotesingle{})
+\item 
+list \mbox{\hyperlink{namespacestation__list_a6ae1c9e772f40f701269337f31bad9e0}{zeros}} = \mbox{[}0\mbox{]} $\ast$ \mbox{\hyperlink{namespacestation__list_ac6633f830d261c0c39a8c19aec4c6518}{num\+\_\+stations}}
+\item 
+list \mbox{\hyperlink{namespacestation__list_a14248eadf453a29c3d2e02915eed66c7}{cols}} = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}num\+\_\+p\textquotesingle{}, \textquotesingle{}num\+\_\+s\textquotesingle{}, \textquotesingle{}start\+\_\+date\textquotesingle{}, \textquotesingle{}end\+\_\+date\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacestation__list_a6a36057aa73e432cb1c7e1cf2df82461}{df\+\_\+missing}} = pd.\+Data\+Frame(columns = \mbox{\hyperlink{namespacestation__list_a14248eadf453a29c3d2e02915eed66c7}{cols}}).set\+\_\+index(\textquotesingle{}station\textquotesingle{})
+\item 
+int \mbox{\hyperlink{namespacestation__list_ac2bf83ad1bb79123782290915bd91676}{num\+\_\+lines}} = 0
+\item 
+int \mbox{\hyperlink{namespacestation__list_ac4f53b7c24e7fc1d483cb8eddefe7eae}{line\+\_\+count}} = 0
+\item 
+bool \mbox{\hyperlink{namespacestation__list_ab456527ce2b83010e5da34b9800f99f7}{in\+\_\+event}} = False
+\item 
+bool \mbox{\hyperlink{namespacestation__list_adaf99c8bc0a3ec739bf3630a2a451ec7}{in\+\_\+header}} = True
+\item 
+\mbox{\hyperlink{namespacestation__list_adce7df1894e7309fc0013ab6397b5f6d}{hypocenter}} = \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{nordic.\+read\+\_\+line1}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__list_adbfb2752369714948f46f97e82438e38}{pick}} = \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{nordic.\+read\+\_\+line4}}(line)
+\item 
+\mbox{\hyperlink{namespacestation__list_a37d39b7491607392be8a616307e98783}{phase}} = pick.\+phase
+\item 
+\mbox{\hyperlink{namespacestation__list_a450a8e974d43c0bb65508483777d9db1}{phase\+\_\+second}} = math.\+floor(pick.\+second)
+\item 
+\mbox{\hyperlink{namespacestation__list_a579b4cad0267d6a99e767fbe12c3800f}{phase\+\_\+time}}
+\item 
+list \mbox{\hyperlink{namespacestation__list_a4fd4241cd4f74bb084a0ed78dad39a9e}{extent}} = \mbox{[}-\/17.\+5, -\/15.\+0, 27.\+5, 29.\+0\mbox{]}
 \end{DoxyCompactItemize}
 
 
@@ -34,6 +64,12 @@ list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{
 \doxysubsubsection{\texorpdfstring{baz}{baz}}
 {\footnotesize\ttfamily station\+\_\+list.\+baz}
 
+\mbox{\Hypertarget{namespacestation__list_a14248eadf453a29c3d2e02915eed66c7}\label{namespacestation__list_a14248eadf453a29c3d2e02915eed66c7}} 
+\index{station\_list@{station\_list}!cols@{cols}}
+\index{cols@{cols}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily list station\+\_\+list.\+cols = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}num\+\_\+p\textquotesingle{}, \textquotesingle{}num\+\_\+s\textquotesingle{}, \textquotesingle{}start\+\_\+date\textquotesingle{}, \textquotesingle{}end\+\_\+date\textquotesingle{}\mbox{]}}
+
 \mbox{\Hypertarget{namespacestation__list_a1332689e7d4121b10677711eb4975f74}\label{namespacestation__list_a1332689e7d4121b10677711eb4975f74}} 
 \index{station\_list@{station\_list}!delta@{delta}}
 \index{delta@{delta}!station\_list@{station\_list}}
@@ -44,7 +80,31 @@ list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{
 \index{station\_list@{station\_list}!df@{df}}
 \index{df@{df}!station\_list@{station\_list}}
 \doxysubsubsection{\texorpdfstring{df}{df}}
-{\footnotesize\ttfamily station\+\_\+list.\+df = pd.\+read\+\_\+table(\mbox{\hyperlink{namespacestation__list_a4d583ea107489b62ef45b66bcab9e18f}{station\+\_\+file}}, delim\+\_\+whitespace=True, header=None, usecols = \mbox{[}0, 1, 2, 3, 4\mbox{]}, names=\mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{fields}})}
+{\footnotesize\ttfamily station\+\_\+list.\+df}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  pd.read\_table(station\_file, delim\_whitespace=\textcolor{keyword}{True}, header=\textcolor{keywordtype}{None},}
+\DoxyCodeLine{2      usecols = [0, 1, 2, 3, 4], names=fields)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacestation__list_a6a36057aa73e432cb1c7e1cf2df82461}\label{namespacestation__list_a6a36057aa73e432cb1c7e1cf2df82461}} 
+\index{station\_list@{station\_list}!df\_missing@{df\_missing}}
+\index{df\_missing@{df\_missing}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{df\_missing}{df\_missing}}
+{\footnotesize\ttfamily station\+\_\+list.\+df\+\_\+missing = pd.\+Data\+Frame(columns = \mbox{\hyperlink{namespacestation__list_a14248eadf453a29c3d2e02915eed66c7}{cols}}).set\+\_\+index(\textquotesingle{}station\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacestation__list_a7172723feba24004cc727533249e5785}\label{namespacestation__list_a7172723feba24004cc727533249e5785}} 
+\index{station\_list@{station\_list}!dfi@{dfi}}
+\index{dfi@{dfi}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{dfi}{dfi}}
+{\footnotesize\ttfamily station\+\_\+list.\+dfi = df.\+set\+\_\+index(\textquotesingle{}station\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacestation__list_a4fd4241cd4f74bb084a0ed78dad39a9e}\label{namespacestation__list_a4fd4241cd4f74bb084a0ed78dad39a9e}} 
+\index{station\_list@{station\_list}!extent@{extent}}
+\index{extent@{extent}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{extent}{extent}}
+{\footnotesize\ttfamily list station\+\_\+list.\+extent = \mbox{[}-\/17.\+5, -\/15.\+0, 27.\+5, 29.\+0\mbox{]}}
 
 \mbox{\Hypertarget{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}\label{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}} 
 \index{station\_list@{station\_list}!fields@{fields}}
@@ -52,11 +112,47 @@ list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{
 \doxysubsubsection{\texorpdfstring{fields}{fields}}
 {\footnotesize\ttfamily list station\+\_\+list.\+fields = \mbox{[}\textquotesingle{}station\textquotesingle{}, \textquotesingle{}network\textquotesingle{}, \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{}, \textquotesingle{}elevation\textquotesingle{}\mbox{]}}
 
+\mbox{\Hypertarget{namespacestation__list_adce7df1894e7309fc0013ab6397b5f6d}\label{namespacestation__list_adce7df1894e7309fc0013ab6397b5f6d}} 
+\index{station\_list@{station\_list}!hypocenter@{hypocenter}}
+\index{hypocenter@{hypocenter}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{hypocenter}{hypocenter}}
+{\footnotesize\ttfamily station\+\_\+list.\+hypocenter = \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{nordic.\+read\+\_\+line1}}(line)}
+
+\mbox{\Hypertarget{namespacestation__list_ab456527ce2b83010e5da34b9800f99f7}\label{namespacestation__list_ab456527ce2b83010e5da34b9800f99f7}} 
+\index{station\_list@{station\_list}!in\_event@{in\_event}}
+\index{in\_event@{in\_event}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{in\_event}{in\_event}}
+{\footnotesize\ttfamily bool station\+\_\+list.\+in\+\_\+event = False}
+
+\mbox{\Hypertarget{namespacestation__list_adaf99c8bc0a3ec739bf3630a2a451ec7}\label{namespacestation__list_adaf99c8bc0a3ec739bf3630a2a451ec7}} 
+\index{station\_list@{station\_list}!in\_header@{in\_header}}
+\index{in\_header@{in\_header}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{in\_header}{in\_header}}
+{\footnotesize\ttfamily bool station\+\_\+list.\+in\+\_\+header = True}
+
+\mbox{\Hypertarget{namespacestation__list_ac4f53b7c24e7fc1d483cb8eddefe7eae}\label{namespacestation__list_ac4f53b7c24e7fc1d483cb8eddefe7eae}} 
+\index{station\_list@{station\_list}!line\_count@{line\_count}}
+\index{line\_count@{line\_count}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{line\_count}{line\_count}}
+{\footnotesize\ttfamily int station\+\_\+list.\+line\+\_\+count = 0}
+
 \mbox{\Hypertarget{namespacestation__list_a28c2f7c5b654be66024009092b97146e}\label{namespacestation__list_a28c2f7c5b654be66024009092b97146e}} 
 \index{station\_list@{station\_list}!nc@{nc}}
 \index{nc@{nc}!station\_list@{station\_list}}
 \doxysubsubsection{\texorpdfstring{nc}{nc}}
 {\footnotesize\ttfamily station\+\_\+list.\+nc}
+
+\mbox{\Hypertarget{namespacestation__list_a5b970693ec956810886b8d4497ab31aa}\label{namespacestation__list_a5b970693ec956810886b8d4497ab31aa}} 
+\index{station\_list@{station\_list}!nordic\_file@{nordic\_file}}
+\index{nordic\_file@{nordic\_file}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{nordic\_file}{nordic\_file}}
+{\footnotesize\ttfamily station\+\_\+list.\+nordic\+\_\+file = sys.\+argv\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__list_ac2bf83ad1bb79123782290915bd91676}\label{namespacestation__list_ac2bf83ad1bb79123782290915bd91676}} 
+\index{station\_list@{station\_list}!num\_lines@{num\_lines}}
+\index{num\_lines@{num\_lines}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{num\_lines}{num\_lines}}
+{\footnotesize\ttfamily int station\+\_\+list.\+num\+\_\+lines = 0}
 
 \mbox{\Hypertarget{namespacestation__list_ac6633f830d261c0c39a8c19aec4c6518}\label{namespacestation__list_ac6633f830d261c0c39a8c19aec4c6518}} 
 \index{station\_list@{station\_list}!num\_stations@{num\_stations}}
@@ -64,9 +160,45 @@ list \mbox{\hyperlink{namespacestation__list_ab31a069dc8fe9c693c5c616ea8e08ebb}{
 \doxysubsubsection{\texorpdfstring{num\_stations}{num\_stations}}
 {\footnotesize\ttfamily station\+\_\+list.\+num\+\_\+stations}
 
+\mbox{\Hypertarget{namespacestation__list_a37d39b7491607392be8a616307e98783}\label{namespacestation__list_a37d39b7491607392be8a616307e98783}} 
+\index{station\_list@{station\_list}!phase@{phase}}
+\index{phase@{phase}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily station\+\_\+list.\+phase = pick.\+phase}
+
+\mbox{\Hypertarget{namespacestation__list_a450a8e974d43c0bb65508483777d9db1}\label{namespacestation__list_a450a8e974d43c0bb65508483777d9db1}} 
+\index{station\_list@{station\_list}!phase\_second@{phase\_second}}
+\index{phase\_second@{phase\_second}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{phase\_second}{phase\_second}}
+{\footnotesize\ttfamily int station\+\_\+list.\+phase\+\_\+second = math.\+floor(pick.\+second)}
+
+\mbox{\Hypertarget{namespacestation__list_a579b4cad0267d6a99e767fbe12c3800f}\label{namespacestation__list_a579b4cad0267d6a99e767fbe12c3800f}} 
+\index{station\_list@{station\_list}!phase\_time@{phase\_time}}
+\index{phase\_time@{phase\_time}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{phase\_time}{phase\_time}}
+{\footnotesize\ttfamily station\+\_\+list.\+phase\+\_\+time}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  datetime.datetime(hypocenter.year, hypocenter.month, hypocenter.day,}
+\DoxyCodeLine{2             pick.hour, pick.minute, phase\_second)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacestation__list_adbfb2752369714948f46f97e82438e38}\label{namespacestation__list_adbfb2752369714948f46f97e82438e38}} 
+\index{station\_list@{station\_list}!pick@{pick}}
+\index{pick@{pick}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{pick}{pick}}
+{\footnotesize\ttfamily station\+\_\+list.\+pick = \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{nordic.\+read\+\_\+line4}}(line)}
+
 \mbox{\Hypertarget{namespacestation__list_a4d583ea107489b62ef45b66bcab9e18f}\label{namespacestation__list_a4d583ea107489b62ef45b66bcab9e18f}} 
 \index{station\_list@{station\_list}!station\_file@{station\_file}}
 \index{station\_file@{station\_file}!station\_list@{station\_list}}
 \doxysubsubsection{\texorpdfstring{station\_file}{station\_file}}
 {\footnotesize\ttfamily station\+\_\+list.\+station\+\_\+file = sys.\+argv\mbox{[}1\mbox{]}}
+
+\mbox{\Hypertarget{namespacestation__list_a6ae1c9e772f40f701269337f31bad9e0}\label{namespacestation__list_a6ae1c9e772f40f701269337f31bad9e0}} 
+\index{station\_list@{station\_list}!zeros@{zeros}}
+\index{zeros@{zeros}!station\_list@{station\_list}}
+\doxysubsubsection{\texorpdfstring{zeros}{zeros}}
+{\footnotesize\ttfamily list station\+\_\+list.\+zeros = \mbox{[}0\mbox{]} $\ast$ \mbox{\hyperlink{namespacestation__list_ac6633f830d261c0c39a8c19aec4c6518}{num\+\_\+stations}}}
 

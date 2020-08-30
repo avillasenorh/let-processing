@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fields_5',['fields',['../namespacestation__list.html#ab31a069dc8fe9c693c5c616ea8e08ebb',1,'station_list']]],
-  ['float_6',['float',['../classnordic_1_1_hypocenter.html#a0904d656ec1027a4c88667ebcce1be69',1,'nordic.Hypocenter.float()'],['../classnordic_1_1_phase__pick.html#a59a9db9558635ccdcbf01879eca913c5',1,'nordic.Phase_pick.float()']]]
+  ['extent_15',['extent',['../namespacestation__list.html#a4fd4241cd4f74bb084a0ed78dad39a9e',1,'station_list.extent()'],['../namespacestation__stats.html#a59c3325a21e16b3478a2652a95ed9f43',1,'station_stats.extent()']]]
 ];
