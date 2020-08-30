@@ -1,0 +1,71 @@
+\hypertarget{namespacenordic}{}\doxysection{nordic Namespace Reference}
+\label{namespacenordic}\index{nordic@{nordic}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnordic_1_1_hypocenter}{Hypocenter}}
+\item 
+class \mbox{\hyperlink{classnordic_1_1_phase__pick}{Phase\+\_\+pick}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacenordic_ae739882df35f008abbf75d841c55c9a0}{read\+\_\+line1}} (line)
+\begin{DoxyCompactList}\small\item\em Function read\+\_\+line1. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacenordic_a30db7f3b3a04f63be7a8549e6bdcde96}{read\+\_\+lineH}} (line)
+\item 
+def \mbox{\hyperlink{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}{read\+\_\+line4}} (line)
+\begin{DoxyCompactList}\small\item\em Function read\+\_\+line4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenordic_ae739882df35f008abbf75d841c55c9a0}\label{namespacenordic_ae739882df35f008abbf75d841c55c9a0}} 
+\index{nordic@{nordic}!read\_line1@{read\_line1}}
+\index{read\_line1@{read\_line1}!nordic@{nordic}}
+\doxysubsubsection{\texorpdfstring{read\_line1()}{read\_line1()}}
+{\footnotesize\ttfamily def nordic.\+read\+\_\+line1 (\begin{DoxyParamCaption}\item[{}]{line }\end{DoxyParamCaption})}
+
+
+
+Function read\+\_\+line1. 
+
+Reads as argument a string formatted as a Line 1 in S\+E\+I\+S\+AN\textquotesingle{}s Nordic format
+
+Returns a \mbox{\hyperlink{classnordic_1_1_hypocenter}{Hypocenter}} dataclass with all the fields in a S\+E\+I\+S\+AN\textquotesingle{}s Line 1
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em line} & string with S\+E\+I\+S\+AN\textquotesingle{}s Nordic hypocenter format (Line 1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classnordic_1_1_hypocenter}{Hypocenter}} dataclass 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}\label{namespacenordic_a88e5f487e37a978b4b44f2662680aaf5}} 
+\index{nordic@{nordic}!read\_line4@{read\_line4}}
+\index{read\_line4@{read\_line4}!nordic@{nordic}}
+\doxysubsubsection{\texorpdfstring{read\_line4()}{read\_line4()}}
+{\footnotesize\ttfamily def nordic.\+read\+\_\+line4 (\begin{DoxyParamCaption}\item[{}]{line }\end{DoxyParamCaption})}
+
+
+
+Function read\+\_\+line4. 
+
+Reads as argument a string formatted as a Line 4 in S\+E\+I\+S\+AN\textquotesingle{}s Nordic format
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em line} & string with S\+E\+I\+S\+AN\textquotesingle{}s Nordic phase card format (Line 4) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classnordic_1_1_phase__pick}{Phase\+\_\+pick}} dataclass with all the information in a phase card line
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]handle error when line is shorter than 80 characters \end{DoxyRefDesc}
+\mbox{\Hypertarget{namespacenordic_a30db7f3b3a04f63be7a8549e6bdcde96}\label{namespacenordic_a30db7f3b3a04f63be7a8549e6bdcde96}} 
+\index{nordic@{nordic}!read\_lineH@{read\_lineH}}
+\index{read\_lineH@{read\_lineH}!nordic@{nordic}}
+\doxysubsubsection{\texorpdfstring{read\_lineH()}{read\_lineH()}}
+{\footnotesize\ttfamily def nordic.\+read\+\_\+lineH (\begin{DoxyParamCaption}\item[{}]{line }\end{DoxyParamCaption})}
+

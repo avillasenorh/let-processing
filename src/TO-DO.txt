@@ -1,0 +1,8 @@
+- Create obspy catalog from event
+
+  + no duplicated phases
+  + remove later phases
+
+- Document functions for Doxygen
+
+
