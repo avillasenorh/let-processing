@@ -118,9 +118,23 @@ with open(nordic_file) as fp:
                     'longitude': hypocenter.longitude,
                     'depth': hypocenter.depth }
 
-                dfs = dfs.append(phase_dict,ignore_index=True)
+                phase_df = pd.DataFrame( {
+                    'phase': pick.phase,
+                    'pick': pick.phase,
+                    'residual': pick.residual,
+                    'distance': pick.distance,
+                    'azimuth': pick.azimuth,
+                    'ot': ot,
+                    'latitude': hypocenter.latitude,
+                    'longitude': hypocenter.longitude,
+                    'depth': hypocenter.depth } , index=[0])
+
+#               dfs = dfs.append(phase_dict,ignore_index=True)
+                dfs = pd.concat([dfs, phase_df], ignore_index=True)
 
 print("Number of lines read: ", num_lines)
+
+print(dfs)
 
 dfp = dfs[dfs.phase == 'P']
 
